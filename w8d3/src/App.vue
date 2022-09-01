@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <NewHeader />
+
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
 
@@ -10,12 +12,14 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import NewFooter from "./components/Footer.vue";
+import NewHeader from "./components/Header.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-    NewFooter
+    NewFooter,
+    NewHeader
   },
 };
 </script>
