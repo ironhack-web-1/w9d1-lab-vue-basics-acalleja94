@@ -9,12 +9,15 @@
 
 <button id="btn-form" type="submit">Submit</button>
 
-<h2>This is the two-day-data-binding result:</h2>
-
-<p>Your name is: {{fName}}</p>
-<p>Your e-mail is: {{fEmail}}</p>
-
 </form>
+
+<div id="binding">
+  <h2>This is the two-day-data-binding result</h2>
+
+<div class="form-res"><p>Your name is: {{fName}}</p></div>
+<div class="form-res"><p>Your e-mail is: {{fEmail}}</p></div>
+</div>
+
   </div>
 </template>
 
@@ -72,6 +75,31 @@ input{
   border-radius: 27px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
+}
+
+#binding{
+  width: 50%;
+  margin: 50px auto;
+  background: #6b61ab;
+  padding: 50px;
+  text-align: left;
+}
+
+#binding h2{
+  color: #fafafa;
+}
+
+.form-res{
+  background: #fafafa;
+  width: 100%;
+  text-align: left;
+  color: rgb(72, 72, 72);
+  padding: 1px;
+  margin-top: 7px;
+}
+
+.form-res p{
+  padding: 0 30px;
 }
 
 </style>
