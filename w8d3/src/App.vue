@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <h1>This is my form</h1>
-    <form action="/form-result.php" method="post" target="_blank">
+    <form action="/form-result.php" method="post" @submit.prevent="formSubmit">
 
 <input type="text" placeholder="Name" name="name" v-model="fName" />
 
@@ -23,15 +23,21 @@
 
 <script>
 
-export default {
-  name: "App",
-  data () {
+  export default {
+    name: "App",
+  data() {
     return {
       fName: '',
       fEmail: ''
     }
-  }
+  },
+  methods: {
+    formSubmit() {
+      alert("Oops, we can't submit this form. Try again later!")
+    }
+  },
 }
+
 </script>
 
 <style>
